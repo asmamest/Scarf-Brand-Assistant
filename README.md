@@ -38,36 +38,7 @@ The project stands out for:
 
 ### System Overview
 
-```mermaid
-graph TB
-    WhatsApp[WhatsApp API] --> Gateway[API Gateway]
-    Gateway --> MessageBroker[Redis Message Broker]
-
-    subgraph Agents
-        Vision[Vision Agent]
-        Dialog[Dialog Agent]
-        Inventory[Inventory Agent]
-        Transaction[Transaction Agent]
-    end
-
-    MessageBroker --> Vision
-    MessageBroker --> Dialog
-    MessageBroker --> Inventory
-    MessageBroker --> Transaction
-
-    subgraph Storage
-        PSQL[(PostgreSQL)]
-        VectorDB[(Vector Store)]
-        Cache[(Redis Cache)]
-    end
-
-    Vision --> VectorDB
-    Dialog --> PSQL
-    Inventory --> PSQL
-    Transaction --> PSQL
-
-    All --> Cache
-```
+![System Architecture](System_Architecture.png)
 
 ### Specialized Agents
 
