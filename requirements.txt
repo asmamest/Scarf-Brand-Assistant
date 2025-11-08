@@ -1,0 +1,47 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+pydantic==2.4.2
+python-dotenv==1.0.0
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+redis==5.0.1
+
+# AI/ML
+torch==2.1.0
+transformers==4.35.0
+sentence-transformers==2.2.2
+optimum==1.14.1
+auto-gptq==0.5.1  # Pour modèles quantifiés
+ctransformers==0.2.27  # Pour modèles GGUF
+langchain==0.0.334
+langgraph==0.0.10
+openai==1.3.0
+chromadb==0.4.18
+faiss-cpu==1.7.4
+weaviate-client==3.24.2
+
+# WhatsApp
+twilio==8.10.0
+whatsapp-cloud-api==0.0.6
+
+# Audio processing
+whisper-cpp==0.0.1  # Whisper local
+pydub==0.25.1  # Audio processing
+
+# Vision
+open-clip-torch==2.23.0
+Pillow==10.1.0
+
+# Monitoring
+prometheus-client==0.18.0
+structlog==23.2.0
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+httpx==0.25.1

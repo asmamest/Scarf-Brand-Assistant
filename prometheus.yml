@@ -1,0 +1,10 @@
+# Configuration Prometheus
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'scarf-assistant'
+    static_configs:
+      - targets: ['localhost:8000']
+    metrics_path: '/metrics'
