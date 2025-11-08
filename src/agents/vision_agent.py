@@ -1,9 +1,13 @@
 from typing import Optional
+import re
 import torch
 from PIL import Image
+import structlog
 from transformers import AutoProcessor, AutoModelForVision2Seq
 from src.core.agent_base import BaseAgent
 from src.core.mcp import MCPMessage
+
+logger = structlog.get_logger()
 
 class VisionAgent(BaseAgent):
     def __init__(self):
