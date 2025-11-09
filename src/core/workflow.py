@@ -6,6 +6,9 @@ from src.agents.vision_agent import VisionAgent
 from src.agents.dialog_agent import DialogAgent
 from src.agents.inventory_agent import InventoryAgent
 from src.agents.transaction_agent import TransactionAgent
+from src.agents.virtual_try_on_agent import VirtualTryOnAgent
+from src.agents.style_advisor_agent import StyleAdvisorAgent
+from src.agents.trend_analyzer_agent import TrendAnalyzerAgent
 
 logger = structlog.get_logger()
 
@@ -28,7 +31,10 @@ class WorkflowManager:
             "vision": VisionAgent(),
             "dialog": DialogAgent(),
             "inventory": InventoryAgent(),
-            "transaction": TransactionAgent()
+            "transaction": TransactionAgent(),
+            "virtual_try_on": VirtualTryOnAgent(),
+            "style_advisor": StyleAdvisorAgent(),
+            "trend_analyzer": TrendAnalyzerAgent()
         }
         
         # Définir les nœuds du workflow

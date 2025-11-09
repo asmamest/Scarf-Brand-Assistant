@@ -5,20 +5,25 @@
 This innovative project offers an intelligent conversational assistant specifically designed for a luxury scarf brand. By combining advanced AI technologies, it provides a personalized and intuitive shopping experience via WhatsApp.
 
 ### 🎯 Mission
+
 Our assistant revolutionizes customer interaction by offering:
+
 - Detailed analysis of scarves using computer vision
 - Natural and contextual conversations in multiple languages
 - Personalized recommendations based on preferences
 - Transparent management of transactions and inventory
 
 ### 💡 Technical Innovation
+
 The project stands out for:
+
 - A sophisticated multi-agent architecture for optimal scalability
 - Multimodal processing (images, text, voice) for a seamless user experience
 - A modern event-driven infrastructure with Redis
 - Advanced vector search for precise recommendations
 
 ### 🔍 Key Points
+
 - **Performance**: Response time < 2s for all interactions
 - **Scalability**: Distributed architecture supporting >10k simultaneous users
 - **Accuracy**: >95% accuracy in pattern recognition
@@ -33,6 +38,11 @@ The project stands out for:
 - 📦 **Inventory Management**: Real-time stock verification
 - 💳 **Transactions**: Integrated purchase process
 - 🎯 **Recommendations**: Personalized suggestions
+- 🔄 **Virtual Try-On**: AR-based scarf visualization
+- 👗 **Style Advisor**: Personal styling recommendations
+- 📈 **Trend Analysis**: Real-time fashion trend insights
+- 🎨 **Color Matching**: Intelligent color harmony suggestions
+- 🌤️ **Seasonal Recommendations**: Weather-aware style advice
 
 ## 🏗️ Architecture
 
@@ -196,8 +206,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 📞 Support
 
 For questions or support:
+
 - Open an issue
 - Contact the development team
 
 ---
+
 Built with ❤️

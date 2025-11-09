@@ -17,6 +17,17 @@ services:
       - VECTOR_STORE=${VECTOR_STORE:-faiss}
     volumes:
       - ./data:/app/data
+      - ./models:/app/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - VIRTUAL_TRY_ON_DEVICE=cuda
     depends_on:
       - db
       - redis

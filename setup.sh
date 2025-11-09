@@ -15,10 +15,25 @@ pip install -r requirements.txt
 # Téléchargement des modèles
 echo "Téléchargement des modèles..."
 
-# Mistral 7B GGUF
+# Téléchargement des modèles de base
 if [ ! -f "$MODELS_DIR/mistral-7b-instruct-v0.2.Q4_K_M.gguf" ]; then
     echo "Téléchargement de Mistral 7B..."
     wget -P $MODELS_DIR https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.2-GGUF/resolve/main/mistral-7b-instruct-v0.2.Q4_K_M.gguf
+fi
+
+# Modèles pour Virtual Try-On
+if [ ! -d "$MODELS_DIR/virtual-try-on" ]; then
+    echo "Téléchargement des modèles Virtual Try-On..."
+    mkdir -p $MODELS_DIR/virtual-try-on
+    wget -P $MODELS_DIR/virtual-try-on https://github.com/openai/clip-pytorch/releases/download/v1.0/clip-vit-base-patch32.pt
+    wget -P $MODELS_DIR/virtual-try-on https://github.com/facebookresearch/pytorch3d/releases/download/v0.7.5/pytorch3d-0.7.5.zip
+fi
+
+# Modèles pour l'analyse des tendances
+if [ ! -d "$MODELS_DIR/trend-analysis" ]; then
+    echo "Configuration des modèles d'analyse des tendances..."
+    mkdir -p $MODELS_DIR/trend-analysis
+    # Les modèles seront téléchargés automatiquement par scikit-learn
 fi
 
 # BLIP-2
